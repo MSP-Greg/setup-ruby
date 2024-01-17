@@ -36,6 +36,13 @@ inputs:
       Consider the runner as a self-hosted runner, which means not using prebuilt Ruby binaries which only work
       on GitHub-hosted runners or self-hosted runners with a very similar image to the ones used by GitHub runners.
       The default is to detect this automatically based on the OS, OS version and architecture.
+  win-ruby-platform-override:
+    description: |
+      This only affect Windows runners. Allows Windows platform setup to override the setup based on RUBY_PLATFORM.
+      At present, the only allowed setting is "none", which only adds Ruby to PATH.
+      No build tools are installed, nor are any ENV setting changed to activate them.
+    default: 'default'
+
 outputs:
   ruby-prefix:
     description: 'The prefix of the installed ruby'
