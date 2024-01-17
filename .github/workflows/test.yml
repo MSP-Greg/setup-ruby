@@ -346,10 +346,7 @@ jobs:
           win-ruby-platform-override: none
           bundler: none
       - name: C:/msys64/mingw64/bin/gcc.exe not installed
-        run: |
-          if (Test-Path -Path "C:/msys64/mingw64/bin/gcc.exe" -PathType Leaf ) {
-            exit 1
-          }
+        run: ruby -e "File.exist?('C:/msys64/mingw64/bin/gcc.exe') && exit!(1)"
 
   lint:
     runs-on: ubuntu-20.04
