@@ -25,7 +25,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: ./
         with:
-          ruby-version: '2.7's
+          ruby-version: '2.7'
           win-ruby-platform-override: ${{ matrix.override }}
           bundler: none
       - name: C:/msys64/mingw64/bin/gcc.exe not installed
