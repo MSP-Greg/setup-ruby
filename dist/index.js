@@ -65213,7 +65213,7 @@ async function install(platform, engine, version) {
     if (inToolCache) {
       rubyPrefix = inToolCache
     } else {
-      rubyPrefix = common.getToolCacheRubyPrefix(platform, engine, version)
+      rubyPrefix = `${drive}:\\${base}`
     }
   } else {
     rubyPrefix = `${drive}:\\${base}`
